@@ -13,6 +13,19 @@ cd buster-example
 npm install
 ```
 
+## Configuration
+
+Add buster-helper to extensions.
+For browser testing place require.js in libs.
+Always place require.js configuration in sources.
+
+## Writing tests
+
+For tests to work in all environments use the following methods of the busterHelper object:
+- busterHelper.require - the require function of require.js used for loading dependencies
+- busterHelper.testsWrapper - pass your highest level tests to this method
+- busterHelper.runTests - run tests when all dependencies have been loaded
+
 ## Usage
 
 For browser and AMD tests (you need to start buster server first):
